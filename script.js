@@ -21,9 +21,12 @@ function rot13(encodedStr){
 		if(c >= 65 && c <= 90){
 			decodedArr.push(String.fromCharcode(c.toUpperCase()));
 		}
+		else {
+			decodedArr.push(encodedStr.charAt(i));  // non-alphabetic character
+		}
 	}
 
-  return decodedArr;
+  return decodedArr.join("");
 }
 
 
